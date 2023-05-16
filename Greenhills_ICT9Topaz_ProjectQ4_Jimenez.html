@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Milimeter Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<style>
+    body {
+        background: #555555;
+        text-align: center;
+        color: #FFFFFF;
+    }
+</style>
+</head>
+<body> 
+    <div class="row row1">
+        <div class="container col-xl-4"></div>
+        <div class="container col-xl-4">
+            <h1>Millimeter Converter</h1><br>
+        </div>
+        <div class="container col-xl-4"></div>
+    </div>
+    <div class="row row2">
+        <div class="container col-xl-4"></div>
+        <div class="container col-md-4">
+            <p><input type="number" id="millimeter" class="form-control" placeholder="Millimeters"></p>
+        </div>
+        <div class="container col-xl-4"></div>
+    </div>
+    <div class="row row3">
+        <div class="container col-xl-4"></div>
+        <div class="container col-xl-4">
+            <input type="button" class="btn btn-dark" onClick="mmToCm()" value="To Centimeters">
+            <input type="button" class="btn btn-dark" onClick="mmToM()" value="To Meters">
+            <input type="button" class="btn btn-dark" onClick="mmToKm()" value="To Kilometers"><br><br>
+        </div>
+        <div class="container col-xl-4"></div>
+    </div>
+    <div class="row row4">
+        <div class="container col-xl-4"></div>
+        <div class="container col-xl-4">
+            <h3 id="output"></h3>
+        </div>
+        <div class="container col-xl-4"></div>
+    </div>
+    <script>
+        function mmToCm() {
+            var mm = document.getElementById('millimeter').value;
+            var cm = mm / 10 + " centimeters";
+            document.getElementById('output').innerHTML = cm;
+        }
+        function mmToM() {
+            var mm = document.getElementById('millimeter').value;
+            var m = mm / 1000 + " meters";
+            document.getElementById('output').innerHTML = m;
+        }
+        function mmToKm() {
+            var mm = document.getElementById('millimeter').value;
+            var km = mm / 1000000 + " kilometer";
+            document.getElementById('output').innerHTML = km;
+        }
+    </script>  
+</body>
+</html>
